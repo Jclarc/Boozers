@@ -1,0 +1,20 @@
+body{
+    font-family: 'Patua One', cursive;
+    background-color: #B57400;
+}
+
+.custom1.darken-2 {
+    background-color: #231F20 !important;
+}
+
+.custom1-text.text-darken-2 {
+    color: #231F20 !important;
+}
+
+.custom2.darken-2 {
+    background-color: #B57400 !important;
+}
+
+.custom2-text.text-darken-2 {
+    color: #B57400 !important;
+}
