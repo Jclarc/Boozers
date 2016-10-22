@@ -7,7 +7,7 @@ body{
     background-color: #231F20 !important;
 }
 
-.custom1-text.text-darken-2 {
+.custom1-text.text-darken-2, nav ul a {
     color: #231F20 !important;
 }
 
