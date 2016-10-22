@@ -18,3 +18,14 @@ body{
 .custom2-text.text-darken-2 {
     color: #B57400 !important;
 }
+
+#main {
+	border-style: groove;
+	border-width: 8px;
+	border-color: #5a5a5a;
+	width: 70%;
+	margin: auto;
+}
+#submit {
+	
+}
