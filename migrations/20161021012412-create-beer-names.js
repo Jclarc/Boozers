@@ -12,27 +12,19 @@ module.exports = {
         type: Sequelize.STRING
       },
       aroma: {
-        type: Sequelize.INTEGER
-      },
-      style: {
-        type: Sequelize.INTEGER
+        type: Sequelize.STRING
       },
       abv: {
-        type: Sequelize.INTEGER
+        type: Sequelize.DECIMAL(10,2)
+      },
+      style: {
+        type: Sequelize.STRING
       },
       color: {
-        type: Sequelize.INTEGER
+        type: Sequelize.STRING
       },
       key_notes: {
-        type: Sequelize.INTEGER
-      },
-      createdAt: {
-        allowNull: false,
-        type: Sequelize.DATE
-      },
-      updatedAt: {
-        allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.STRING
       }
     });
   },

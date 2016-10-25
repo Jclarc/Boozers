@@ -21,23 +21,10 @@ app.set('view engine', 'handlebars');
 var routes = require('./controllers/controller.js');
 app.use('/', routes);
 
-var beer_abvs = require("./models")["beer_abvs"];
-beer_abvs.sync();
 
-var beer_aromas = require("./models")["beer_aromas"];
-beer_aromas.sync();
+// var Beer = require("./models")["beer_names"];
+// beer_names.sync();
 
-var beer_color = require("./models")["beer_color"];
-beer_color.sync();
-
-var beer_key_notes = require("./models")["beer_key_notes"];
-beer_key_notes.sync();
-
-var beer_names = require("./models")["beer_names"];
-beer_names.sync();
-
-var beer_styles = require("./models")["beer_styles"];
-beer_styles.sync();
 
 
 
