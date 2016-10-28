@@ -1,0 +1,62 @@
+body{
+    font-family: 'Patua One', cursive;
+    background-color: #B57400;
+}
+
+.custom1.darken-2 {
+    background-color: #231F20 !important;
+}
+
+.custom1-text.text-darken-2, nav ul a {
+    color: #231F20 !important;
+}
+
+.custom2.darken-2 {
+    background-color: #B57400 !important;
+}
+
+.custom2-text.text-darken-2 {
+    color: #B57400 !important;
+}
+
+#main {
+	border-style: groove;
+	border-width: 8px;
+	border-color: #5a5a5a;
+	width: 70%;
+	margin: auto;
+}
+
+#submit {
+
+}
+
+footer.page-footer .footer-copyright {
+  overflow: hidden;
+  height: 50px;
+  line-height: 50px;
+  color: rgba(255, 255, 255, 0.8);
+  background-color: #5a5a5a;
+}
+
+nav {
+  color: #fff;
+  background-color: #5a5a5a;
+  width: 100%;
+  height: 56px;
+  line-height: 56px;
+}
+
+.btn, .btn-large {
+  text-decoration: none;
+  color: #fff;
+  background-color: #5a5a5a;
+  text-align: center;
+  letter-spacing: .5px;
+  transition: .2s ease-out;
+  cursor: pointer;
+}
+
+.btn:hover, .btn-large:hover {
+  background-color: rgba(0, 0, 0, 0.87);
+}
