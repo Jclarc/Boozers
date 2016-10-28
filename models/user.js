@@ -26,17 +26,9 @@ module.exports = function(sequelize, DataTypes) {
     tableName: 'users',
 
     classMethods: {
-      associate: function(models) {
-        User.hasMany(models.Cat, {
-          onDelete: "CASCADE",
-          hooks: true,
-          foreignKey: {
-            allowNull: false
-          }
-        })
-      }
-    }
-  })
+     
+  }
+})
 
   return User;
 };

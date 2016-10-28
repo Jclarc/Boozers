@@ -26,7 +26,23 @@ app.use('/', routes);
 // beer_names.sync();
 
 
+app.get('/', function(req,res) {
 
+
+    connection.query('SELECT * FROM beer_names; WHERE abv = ?' [req.body.abv], function(err, data) {
+
+      if (err) throw err;
+
+      if ([req.body.abv == "1"]){
+      	connection.query('SELECT color; FROM beer_names; WHERE abv<=5.4', function(err, data){  
+      		res.render('index', {beer_names: data});
+
+      }
+
+      res.render('index', {beer: data});
+
+    });
+});
 
 var port = 3000;
 app.listen(port);

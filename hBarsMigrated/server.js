@@ -6,9 +6,14 @@ var bodyParser = require('body-parser');
 var session = require('express-session'); 
 var methodOverride = require('method-override'); // for deletes in express
 
+var Sequelize = require('sequelize');
+var Sequelize = require('sequelize');
+var sequelize = new Sequelize('beer_db', 'root', null);
+
 
 var application_controller = require('./controllers/application_controller');
 var home_controller = require('./controllers/home_controller');
+var results_controller = require('./controllers/results_controller');
 //var users_controller = require('./controllers/users_controller');
 
 
@@ -36,6 +41,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', application_controller);
+app.use('/results', results_controller);
 app.use('/home', home_controller);
 //app.use('/users', users_controller);
 
@@ -44,6 +50,7 @@ app.use(function(req, res, next) {
   err.status = 404;
   next(err);
 });
+
 app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error', {
@@ -51,4 +58,32 @@ app.use(function(err, req, res, next) {
     error: (app.get('env') === 'development') ? err : {}
   })
 });
+
+
+// app.get('/home', function(req,res) {
+
+//     connection.query('SELECT * FROM beer_names; WHERE abv = ?' [req.body.abv], function(err, data) {
+
+//       if (err) throw err;
+
+//       if ([req.body.abv == "1"]){
+//       	connection.query('SELECT color; FROM beer_names; WHERE abv<=5.4', function(err, data){  
+//       		res.render('index', {beer_names: data});
+
+//       })
+
+
+//     }
+// })
+// })
+
+// sequelize.query('SELECT color; FROM beer_names; WHERE abv = "5"',
+//   {  type: sequelize.QueryTypes.SELECT }).then(function(beer_names) {
+//   console.log(beer_names.color)
+// });
+
+
+var port = 3000;
+app.listen(port);
+
 module.exports = app;

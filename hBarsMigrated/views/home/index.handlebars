@@ -5,6 +5,7 @@ Here is the main HTML where handlebars will render to
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.0"/>
@@ -21,6 +22,9 @@ Here is the main HTML where handlebars will render to
 </head>
 
 <body>
+
+
+
 <ul id="dropdown1" class="dropdown-content">
     <li><a href="#!">one</a></li>
 </ul>
@@ -40,7 +44,36 @@ Here is the main HTML where handlebars will render to
         <br><br>
         <h1 class="header center custom1-text text-darken-2"><img src="../../public/assets/images/beer_glass-512.png" height="150" width="150"><br>Boozers</h1>
         <div class="row container">
-            <h5 class="center header col s12 custom1-text text-darken-2 center-align">A application that utilizes a mysql database of beers categorized by styles and type, and then pulls from thebeerspot api to recommend beers and show you where the brewery is located. THIS APP IS NOT UNTAPPED. but we still might do undercover rubber. cliff hanger.</h5>
+            <h5 class="center header col s12 custom1-text text-darken-2 center-align">
+  <div class="slider">
+    <ul class="slides">
+      <li>
+        <div class="caption center-align">
+          <h3>This is our big Tagline!</h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        </div>
+      </li>
+      <li>
+        <div class="caption left-align">
+          <h3>Left Aligned Caption</h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        </div>
+      </li>
+      <li>
+        <div class="caption right-align">
+          <h3>Right Aligned Caption</h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        </div>
+      </li>
+      <li>
+        <div class="caption center-align">
+          <h3>This is our big Tagline!</h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        </div>
+      </li>
+    </ul>
+  </div>
+      </h5>
         </div>
         <br><br>
     </div>
@@ -90,6 +123,11 @@ Here is the main HTML where handlebars will render to
 <script src="assets/materialize/js/materialize.js"></script>
 
 <script>
+
+    $(document).ready(function(){
+      $('.slider').slider({full_width: true});
+    });
+
     $(document).ready(function(){
         $('.parallax').parallax();
         $(".dropdown-button").dropdown();
